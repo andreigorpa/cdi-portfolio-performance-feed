@@ -26,7 +26,7 @@ def atualizar_cdi():
     if not os.path.exists(nome_arquivo):
         print("[+] Arquivo não encontrado. Iniciando carga histórica (Últimos 3 anos)...")
         data_fim_historico = datetime.now().strftime("%d/%m/%Y")
-        data_ini_historico = (datetime.now() - timedelta(days=365 * 3)).strftime("%d/%m/%Y")
+        data_ini_historico = (datetime.now() - timedelta(days=365 * 10)).strftime("%d/%m/%Y")
         
         dados_api = buscar_dados_api(data_ini_historico, data_fim_historico)
         if not dados_api:
